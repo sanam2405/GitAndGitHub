@@ -10,7 +10,7 @@
 
 ``` git checkout -b <branch_name> ```
 
-- Check the difference and compare to git branches
+- Check the difference and compare two git branches
 
 ``` git diff <branch_name>  ```
 
@@ -18,3 +18,10 @@
 
 ``` git status ```
 
+- Start tracking files
+
+```
+    git add <file_name>  (For tracking a single file)
+    git add .            (For tracking all the files)
+
+```
