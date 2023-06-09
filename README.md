@@ -45,13 +45,13 @@
     git add .            (For tracking all the files)
 ```
 
-- Staging the tracked files
+- Stage the tracked files
 
 ``` 
     git commit -m <commit_message_title> -m <commit_message_description> 
 ```
 
-- Pushing the current state of the branch into the remote GitHub repository
+- Push the current state of the branch into the remote GitHub repository
 
 ``` 
     git push origin <branch_name>   
