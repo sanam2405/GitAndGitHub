@@ -20,8 +20,10 @@
 
 - Start tracking the files
 
-``` git add <file_name>  (For tracking a single file)
+``` 
+    git add <file_name>  (For tracking a single file)
     git add .            (For tracking all the files)
+    
 ```
 
 - Staging the tracked files
