@@ -49,7 +49,8 @@
 - .git DIRETORY
 
 ```
-    The .git directory (which is normally a hidden directoy) stores all the information for the Version Control System
+    The .git directory (which is normally a hidden directoy) stores all the information for the 
+    Version Control System
 ```
 
 ## Git Commands
