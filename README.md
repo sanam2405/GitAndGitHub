@@ -32,7 +32,7 @@
     The branches that are present remotely in GitHub
 ```
 
-- Pull Requests (PRs)
+- PULL REQUESTS (PRs)
 
 ```
     A pull request is a way to request to pull your code and merge it with the intended branch
