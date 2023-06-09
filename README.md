@@ -8,6 +8,18 @@
     Currently active or checked out branch
 ```
 
+- ORIGIN
+
+```
+    Name given to the URL to the user's personal forked remote GitHub repository
+```
+
+- UPSTREAM
+
+```
+    Name given to the URL of the original project remote GitHub repository
+```
+
 - LOCAL BRANCHES
 
 ```
@@ -18,6 +30,20 @@
 
 ```
     The branches that are present remotely in GitHub
+```
+
+- Pull Requests (PRs)
+
+```
+    A pull request is a way to request to pull your code and merge it with the intended branch
+    It serves as a way to showcase the code and for code reviewing and discussing before
+    it is actually merged into the intended branch
+```
+
+- FORK
+
+```
+    A complete copy of the original GitHub repository where changes and pull requests can be made
 ```
 
 - .git DIRETORY
@@ -55,6 +81,12 @@
     git log 
 ```
 
+- See the remote URLs that are set 
+
+``` 
+    git remote -v
+```
+
 
 ### Git Branching, Tracking, Pushing and Pulling
 
@@ -90,6 +122,12 @@
     git branch -d <branch_name>
 ```
 
+- Delete an available remote GitHub branch
+
+```
+    git push origin --delete <github_branch_name>
+```
+
 - Fetch the latest remote changes
 
 ```
@@ -99,17 +137,36 @@
 - Pull the latest changes from a remote branch
 
 ```
-    git pull origin <branch_name>
+    git pull origin     <branch_name>   (Pull from user's personal forked remote branch)
+    git pull upstream   <branch_name>   (Pull from original project's remote branch)
 ```
 
-- Start tracking the files
+- Stage the unstaged files
 
 ``` 
     git add <file_name>  (For tracking a single file)
     git add .            (For tracking all the files)
 ```
 
-- Stage the tracked files
+- Stash the staged files
+
+```
+    git stash
+```
+
+- Pop the stashed files
+
+```
+    git stash pop
+```
+
+- Clear or delete the stashed files
+
+``` 
+    git stash clear
+```
+
+- Commit or click a snapshot of the staged files
 
 ``` 
     git commit -m <commit_message_title> -m <commit_message_description> 
@@ -119,6 +176,7 @@
 
 ``` 
     git push origin <branch_name>   
+    git push origin <branch_name> -f    (Force Push)
 ```
 
 ### Git Undoing and Going Back In Time
@@ -140,3 +198,16 @@
 ```
     git reset HEAD~1 
 ```
+
+- Restoring a deleted file
+
+```
+    git restore <file_name>
+```
+
+- Restoring a file to keep some of the modified portions of the file and discard some of the modified portions
+
+```
+    git restore -p <file_name>
+```
+
