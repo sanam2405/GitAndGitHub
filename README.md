@@ -39,14 +39,32 @@
     git commit -m <commit_message_tile> -m <commit_message_description> 
 ```
 
-- Untrack and unstage the tracked files
+- Unstage the tracked files. Used to UNDO a git add
 
 ```
-    git restore HEAD~1 
+    git reset   
 ```
 
-- Pushing the current state into the remote GitHub repository
+- Reset and go to a particular commit back in history
+
+```
+    git reset <commit_hash>
+```
+
+- Unstage and untrack the tracked files. Used to UNDO a git commit
+
+```
+    git reset HEAD~1 
+```
+
+- Pushing the current state of the branch into the remote GitHub repository
 
 ``` 
     git push origin <branch_name>   
+```
+
+- See the git commit history and logs
+
+``` 
+    git log 
 ```
