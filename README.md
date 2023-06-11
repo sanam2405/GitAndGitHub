@@ -82,6 +82,32 @@
     git log 
 ```
 
+- Add Remote ORIGIN
+
+```
+    git remote add origin <remote_origin_url>
+
+```
+
+- Add Remote UPSTREAM
+
+```
+    git remote add upstream <remote_upstream_url>
+```
+
+- Set Remote ORIGIN (Modify existing URL)
+
+```
+    git remote set-url origin <remote_origin_url>
+
+```
+
+- Set Remote UPSTREAM (Modify existing URL)
+
+```
+    git remote set-url upstream <remote_upstream_url>
+```
+
 - See the remote URLs that are set 
 
 ``` 
