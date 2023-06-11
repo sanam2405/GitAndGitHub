@@ -86,7 +86,6 @@
 
 ```
     git remote add origin <remote_origin_url>
-
 ```
 
 - Add Remote UPSTREAM
@@ -99,7 +98,6 @@
 
 ```
     git remote set-url origin <remote_origin_url>
-
 ```
 
 - Set Remote UPSTREAM (Modify existing URL)
