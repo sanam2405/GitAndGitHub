@@ -177,15 +177,34 @@
 
 ```
     git stash
+    git stash push -m <stash_message>
 ```
 
-- Pop the stashed files
+- See the stash stack
 
 ```
-    git stash pop
+    git stash list
 ```
 
-- Clear or delete the stashed files
+- Apply a particular stash from the stash stack
+
+```
+    git stash apply <stash_id>
+```
+
+- Pop the stashed files (Apply the stash and delete it from the stack - Apply + Drop)
+
+```
+    git stash pop <stash_id>
+```
+
+- Drop or Delete a particular stash from the stash stack
+
+```
+    git stash drop <stash_id>
+```
+
+- Clear or delete all the stashed files from stash stack
 
 ``` 
     git stash clear
