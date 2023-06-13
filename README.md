@@ -295,7 +295,7 @@
 - Cherrypick a particular commit from some other feature branch and add on top of the current branch
 
 ```
-    git cherry-pick <commit_id>
+    git cherry-pick <commit_hash>
 ```
 
 - Merge a particular branch into the HEAD or current branch
@@ -407,8 +407,8 @@
 
 ```
     git bisect start
-    git good <commit_id>
-    git bad <commit_id>
+    git bisect good <good_commit_hash>
+    git bisect bad <bad_commit_hash>
     git bisect good/bad
 ```
 
