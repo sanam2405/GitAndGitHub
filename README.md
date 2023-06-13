@@ -2,10 +2,27 @@
 
 ## Concepts and Terminologies
 
+- .git DIRETORY
+
+```
+    The .git directory (which is normally a hidden directoy) stores all the information for the 
+    Version Control System
+```
+
 - HEAD
 
 ``` 
     Currently active or checked out branch
+```
+
+- HOOKS
+
+```
+    These are files present in the .git/hooks directory that are used to fire off custom 
+    scripts when certain important actions occur. There are two groups of these hooks: 
+    client-side and server-side. Client-side hooks are triggered by operations such as 
+    committing and merging, while server-side hooks run on network operations such 
+    as receiving pushed commits
 ```
 
 - ORIGIN
@@ -43,57 +60,115 @@
 - FORK
 
 ```
-    A complete copy of the original GitHub repository where changes and pull requests can be made
+    A complete copy of the original GitHub repository where changes and pull requests can 
+    be made
 ```
 
-- ADD
+- INIT
 
 ```
+    Used to create an empty git repository or reinitialize an existing git repository
+```
 
+- STAGE
+
+```
+    Staging means to bring the untracked and modified files to the staging area before
+    a snapshop is being taken through the commit command
 ```
 
 - STASH
 
 ```
-
+    Stashing means to temporarily shift and keep the staged files aside from the staged 
+    area without actually commiting the staged files. These stashed files and be brought 
+    back as and when required to the staging area 
 ```
 
 - COMMIT
 
 ```
-
+    Clicking a snapshot of the currently stagged files
 ```
 
 - BISECT
 
 ```
-
+    Uses Binary Search to find the exact commit that introduced a bug. The commits can be 
+    seen as a monotone space : [1,1,1,1,1,....,1,1,0,0,0,0,....,0] where 1 represents good 
+    commit and 0 represents bad commit. Hence we can find the first bad commit  and track 
+    from which commit our code exploded
 ```
 
 - CHERRY-PICK
 
 ```
-
+    Cherry-picks a particular commit (usually from some other branch, by its hash value) 
+    and then adds it on top of my current branch and creats a new commit. This is used 
+    when I do not want all the commits or changes of that feature branch and wish to have 
+    some specific commits of that feature branch on top of my local branch
 ```
 
 - SQUASH
 
 ```
-
+    Merging multiple commits into a single commit so as to remove dirty commits and
+    keep the workflow clean
 ```
 
 - REBASE
 
 ```
-
+    An alternative to merge, where all the commits of the feature branch is moved and 
+    shifted on top of the master/main branch. In this way, the commit history of the
+    feature branch can be added on top of the master/main branch. However, in case of 
+    merge, the intermediate commits in the feature branch are lost and only a single 
+    new commit is added on top of the master/main branch
 ```
 
-- .git DIRETORY
+- PUSH
 
 ```
-    The .git directory (which is normally a hidden directoy) stores all the information for the 
-    Version Control System
+    Make the changes that were just commited visible and available on top of the local 
+    git branch or the remote GitHub branch
 ```
+
+- FETCH
+
+```
+    Fetch the recently made changes in the remote origin branch or the remote upstream
+    branch to our local git branch. Fetch creates a seperate branch and does not merge
+    with our current branch. Hence we can check the diff and modifications without 
+    merging into out branch   
+```
+
+- PULL
+
+```
+    Pull the recently made changes in the remote origin branch or the remote upstream
+    branch to our local git branch. Pull fetches and merges the changes with our current 
+    branch. Basically, pull = fetch + merge
+```
+
+## Analogy with my Crush
+
+> *As I waltzed into the mesmerizing venue of my crush's birthday extravaganza, my heart skipped a beat. It was a sight to behold, just like a perfectly organized repository with files and folders neatly arranged. Little did I know that my journey as a photographer would soon become entangled with the art of git, leading to a hilarious and insightful analogy.*
+>
+> *In this grand affair, I, the humble photographer, played the role of git itself. Like git, I had the power to capture moments and preserve them for eternity. But first, I needed the perfect camera to match the occasion. My trusty gear was divided into three branches—each with its unique flair. The DSLR branch would capture crisp and high-quality snapshots, the SLR branch was dedicated to timeless classics, and the video camera branch added a touch of motion to the memories.*
+>
+> *As the night unfolded, it was time to bring the guests and invitees onto the stage. They were like the files and folders, waiting to be showcased. With the finesse of a git command, I would add and stage each guest onto the podium. Clicking my camera shutter was akin to capturing those delightful moments in a snapshot.*
+>
+> *Now, here's where the fun began. I had a choice: either commit the snapshot directly and save a local version in my camera—just like committing changes in git—or I could request the guests to hold on and retreat to the backstage. Why, you ask? Well, I had some tricks up my sleeve. I wanted to experiment with lighting arrangements, enhance features, and surprise everyone with dazzling effects. This act of whisking the guests away to the backstage was my personal way of stashing.*
+>
+> *With the guests waiting patiently behind the scenes, I would unleash my creative genius. It was as if I were making changes to my code, tweaking and refining the atmosphere. And when the time was right, I would bring the guests back onto the stage, one by one, unveiling the wonders of my imagination.*
+>
+> *Just like an artist unstash changes, I would call them back, and their presence would grace the spotlight once again. The crowd would gasp in awe as I captured their radiant smiles and infectious laughter. Unstashing changes was my way of showing the world the hidden gems I had crafted, while ensuring that the main stage remained a spectacle.*
+>
+> *Once I was satisfied with my snapshots, it was time to immortalize them. Just as I had local copies in my camera from committing, I could now publish those snapshots in a grand photo album. And where else would I host this album of wonders? None other than the remote GitHub repository, a digital realm where my photographs could shine for all to see.*
+>
+> *So, just like I immortalized my crush's special day through my lens, Git mirrored my journey as a photographer, preserving the history of my art, tracking improvements, and GitHub by sharing them with the world. It was a perfect blend of artistry, technology, and a little bit of wit—much like the way my crush lit up the room with her charm and effortlessly stole the show with her magnetic charm.*
+>
+> *Therefore, my dear friends, let us raise a toast to the birthday bash that merged the realms of love and git, reminding us that in the grand symphony of life, even the quirkiest analogies can reveal profound truths.*
 
 ## Git Commands
 
@@ -158,7 +233,7 @@
 ```
 
 
-### Git Branching, Tracking, Pushing and Pulling
+### Git Branching, Tracking, Merging Pushing and Pulling
 
 
 - Create a new git branch 
@@ -215,6 +290,34 @@
 ```
     git pull origin     <branch_name>   (Pull from user's personal forked remote branch)
     git pull upstream   <branch_name>   (Pull from original project's remote branch)
+```
+
+- Cherrypick a particular commit from some other feature branch and add on top of the current branch
+
+```
+    git cherry-pick <commit_id>
+```
+
+- Merge a particular branch into the HEAD or current branch
+
+```
+    git merge <branch_name>
+```
+
+- Rebase a particular branch with the main/master (Sync with main/master - checks the possibility of merge conflicts)
+
+```
+    git switch <branch_name_to_be_rebased>
+    git rebase main
+    git rebase master
+```
+
+- Move and shift the rebased branch commits on top of the master/main branch and then blow off the rebased branch
+
+```
+    git switch main
+    git switch master
+    git rebase <branch_name_that_was_rebased>
 ```
 
 - Stage the unstaged files
@@ -298,6 +401,15 @@
 
 ```
     git reset HEAD~1 
+```
+
+- Debug the exact commit which introduced a bug
+
+```
+    git bisect start
+    git good <commit_id>
+    git bad <commit_id>
+    git bisect good/bad
 ```
 
 - Restoring a deleted file
