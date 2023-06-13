@@ -233,7 +233,7 @@
 ```
 
 
-### Git Branching, Tracking, Merging Pushing and Pulling
+### Git Branching, Tracking, Merging, Pushing and Pulling
 
 
 - Create a new git branch 
