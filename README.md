@@ -46,6 +46,48 @@
     A complete copy of the original GitHub repository where changes and pull requests can be made
 ```
 
+- ADD
+
+```
+
+```
+
+- STASH
+
+```
+
+```
+
+- COMMIT
+
+```
+
+```
+
+- BISECT
+
+```
+
+```
+
+- CHERRY-PICK
+
+```
+
+```
+
+- SQUASH
+
+```
+
+```
+
+- REBASE
+
+```
+
+```
+
 - .git DIRETORY
 
 ```
@@ -80,6 +122,9 @@
 
 ``` 
     git log 
+    git log --oneline
+    git log --graph
+    git log --graph --oneline --decorate
 ```
 
 - Add Remote ORIGIN
@@ -127,6 +172,12 @@
 
 ```
     git branch -m <new_branch_name>
+```
+
+- Switch to just the previous git branch
+
+```
+    git switch -
 ```
 
 - Switch to another git branch
@@ -190,6 +241,12 @@
 
 ```
     git stash apply <stash_id>
+```
+
+- Create a new branch with a particular stash on top of the current HEAD
+
+```
+    git stash branch <branch_name> <stash_id>
 ```
 
 - Pop the stashed files (Apply the stash and delete it from the stack - Apply + Drop)
