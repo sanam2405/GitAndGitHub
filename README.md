@@ -176,26 +176,26 @@
 
 - Check the .git directory
 
-``` 
+```console 
     ls -a 
 ```
 
 - Check the git status
 
-``` 
+```console  
     git status 
 ```
 
 - See the currently available git branches 
 
-``` 
+```console  
     git branch      (Shows all the currently available git branches)
     git branch -v   (Shows the currently available git branches along with their details)
 ```
 
 - See the git commit history and logs
 
-``` 
+```console  
     git log 
     git log --oneline
     git log --graph
@@ -204,31 +204,31 @@
 
 - Add Remote ORIGIN
 
-```
+```console 
     git remote add origin <remote_origin_url>
 ```
 
 - Add Remote UPSTREAM
 
-```
+```console 
     git remote add upstream <remote_upstream_url>
 ```
 
 - Set Remote ORIGIN (Modify existing URL)
 
-```
+```console 
     git remote set-url origin <remote_origin_url>
 ```
 
 - Set Remote UPSTREAM (Modify existing URL)
 
-```
+```console 
     git remote set-url upstream <remote_upstream_url>
 ```
 
 - See the remote URLs that are set 
 
-``` 
+```console  
     git remote -v
 ```
 
@@ -238,75 +238,75 @@
 
 - Create a new git branch 
 
-``` 
+```console  
     git checkout -b <branch_name> 
     git branch <branch_name>
 ```
 
 - Rename the current git branch
 
-```
+```console 
     git branch -m <new_branch_name>
 ```
 
 - Switch to just the previous git branch
 
-```
+```console 
     git switch -
 ```
 
 - Switch to another git branch
 
-```
+```console 
     git switch <branch_name>
 ```
 
 - Check the differences and compare a git branch to the current git branch
 
-``` 
+```console  
     git diff <branch_name>  
 ```
 
 - Delete an available git branch
 
-```
+```console 
     git branch -d <branch_name>
 ```
 
 - Delete an available remote GitHub branch
 
-```
+```console 
     git push origin --delete <github_branch_name>
 ```
 
 - Fetch the latest remote changes
 
-```
+```console 
     git fetch origin
 ```
 
 - Pull the latest changes from a remote branch
 
-```
+```console 
     git pull origin     <branch_name>   (Pull from user's personal forked remote branch)
     git pull upstream   <branch_name>   (Pull from original project's remote branch)
 ```
 
 - Cherrypick a particular commit from some other feature branch and add on top of the current branch
 
-```
+```console 
     git cherry-pick <commit_hash>
 ```
 
 - Merge a particular branch into the HEAD or current branch
 
-```
+```console 
     git merge <branch_name>
 ```
 
 - Rebase a particular branch with the main/master (Sync with main/master - checks the possibility of merge conflicts)
 
-```
+```console 
     git switch <branch_name_to_be_rebased>
     git rebase main
     git rebase master
@@ -314,7 +314,7 @@
 
 - Move and shift the rebased branch commits on top of the master/main branch and then blow off the rebased branch
 
-```
+```console 
     git switch main
     git switch master
     git rebase <branch_name_that_was_rebased>
@@ -322,63 +322,63 @@
 
 - Stage the unstaged files
 
-``` 
+```console  
     git add <file_name>  (For tracking a single file)
     git add .            (For tracking all the files)
 ```
 
 - Stash the staged files
 
-```
+```console 
     git stash
     git stash push -m <stash_message>
 ```
 
 - See the stash stack
 
-```
+```console 
     git stash list
 ```
 
 - Apply a particular stash from the stash stack
 
-```
+```console 
     git stash apply <stash_id>
 ```
 
 - Create a new branch with a particular stash on top of the current HEAD
 
-```
+```console 
     git stash branch <branch_name> <stash_id>
 ```
 
 - Pop the stashed files (Apply the stash and delete it from the stack - Apply + Drop)
 
-```
+```console 
     git stash pop <stash_id>
 ```
 
 - Drop or Delete a particular stash from the stash stack
 
-```
+```console 
     git stash drop <stash_id>
 ```
 
 - Clear or delete all the stashed files from stash stack
 
-``` 
+```console  
     git stash clear
 ```
 
 - Commit or click a snapshot of the staged files
 
-``` 
+```console  
     git commit -m <commit_message_title> -m <commit_message_description> 
 ```
 
 - Push the current state of the branch into the remote GitHub repository
 
-``` 
+```console  
     git push origin <branch_name>   
     git push origin <branch_name> -f    (Force Push)
 ```
@@ -387,25 +387,25 @@
 
 - Unstage the tracked files. Used to UNDO a git add
 
-```
+```console 
     git reset   
 ```
 
 - Reset and go to a particular commit back in history
 
-```
+```console 
     git reset --hard <commit_hash>
 ```
 
 - Unstage and untrack the tracked files. Used to UNDO a git commit
 
-```
+```console 
     git reset HEAD~1 
 ```
 
 - Debug the exact commit which introduced a bug
 
-```
+```console 
     git bisect start
     git bisect good <good_commit_hash>
     git bisect bad <bad_commit_hash>
@@ -414,13 +414,13 @@
 
 - Restoring a deleted file
 
-```
+```console 
     git restore <file_name>
 ```
 
 - Restoring a file to keep some of the modified portions of the file and discard some of the modified portions
 
-```
+```console 
     git restore -p <file_name>
 ```
 
