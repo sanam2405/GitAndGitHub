@@ -5,7 +5,7 @@
 - .git DIRETORY
 
 ```
-    The .git directory (which is normally a hidden directoy) stores all the information for the 
+    The .git directory (which is normally a hidden directory) stores all the information for the 
     Version Control System
 ```
 
@@ -74,21 +74,21 @@
 
 ```
     Staging means to bring the untracked and modified files to the staging area before
-    a snapshop is being taken through the commit command
+    a snapshot is being taken through the commit command
 ```
 
 - STASH
 
 ```
     Stashing means to temporarily shift and keep the staged files aside from the staged 
-    area without actually commiting the staged files. These stashed files and be brought 
+    area without actually committing the staged files. These stashed files and be brought 
     back as and when required to the staging area 
 ```
 
 - COMMIT
 
 ```
-    Clicking a snapshot of the currently stagged files
+    Clicking a snapshot of the currently staged files
 ```
 
 - BISECT
@@ -104,7 +104,7 @@
 
 ```
     Cherry-picks a particular commit (usually from some other branch, by its hash value) 
-    and then adds it on top of my current branch and creats a new commit. This is used 
+    and then adds it on top of my current branch and creates a new commit. This is used 
     when I do not want all the commits or changes of that feature branch and wish to have 
     some specific commits of that feature branch on top of my local branch
 ```
@@ -129,7 +129,7 @@
 - PUSH
 
 ```
-    Make the changes that were just commited visible and available on top of the local 
+    Make the changes that were just committed visible and available on top of the local 
     git branch or the remote GitHub branch
 ```
 
@@ -137,7 +137,7 @@
 
 ```
     Fetch the recently made changes in the remote origin branch or the remote upstream
-    branch to our local git branch. Fetch creates a seperate branch and does not merge
+    branch to our local git branch. Fetch creates a separate branch and does not merge
     with our current branch. Hence we can check the diff and modifications without 
     merging into out branch   
 ```
@@ -148,6 +148,16 @@
     Pull the recently made changes in the remote origin branch or the remote upstream
     branch to our local git branch. Pull fetches and merges the changes with our current 
     branch. Basically, pull = fetch + merge
+```
+
+- SUBMODULE
+
+```
+    A submodule is a git repository within another git repository. Basically it's a 
+    nested git repository. This is mostly used when we want to use some third-party
+    code or libraries into our own code. We create a separate submodule for the 
+    third-party repo with the required libraries. This way we can keep track of
+    main git repo and the submodule repo simultaneously
 ```
 
 ## Analogy with my Crush
@@ -233,8 +243,19 @@
 ```
 
 
-### Git Branching, Tracking, Merging, Pushing and Pulling
+### Git Cloning, Branching, Tracking, Merging, Pushing and Pulling
 
+- Cloning a remote GitHub Repository
+
+```console
+    git clone <remote_GitHub_Repository_URL>
+    git clone --recurse-submodules <remote_GitHub_Repository_URL>
+```
+
+- Initializing the git submodules after cloning from a remote GitHub Repository
+```console
+    git submodule update --init --recursive
+```
 
 - Create a new git branch 
 
