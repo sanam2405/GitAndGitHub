@@ -288,10 +288,17 @@
     git diff <branch_name>  
 ```
 
-- Delete an available git branch
+- Delete an available local git branch
 
 ```console 
     git branch -d <branch_name>
+```
+
+- Delete an available remote git branch
+
+```console 
+    git branch --delete --remotes <origin/branch_name>
+    git branch --delete --remotes <upstream/branch_name>
 ```
 
 - Delete an available remote GitHub branch
@@ -304,6 +311,8 @@
 
 ```console 
     git fetch origin
+    git fetch upstream 
+    git fetch upstream --prune
 ```
 
 - Pull the latest changes from a remote branch
