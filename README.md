@@ -243,7 +243,7 @@
 ```
 
 
-### Git Cloning, Branching, Tracking, Merging, Pushing and Pulling
+### Git Cloning, Branching, Tracking, Merging, Pushing, Pulling and Deleting
 
 - Cloning a remote GitHub Repository
 
@@ -288,10 +288,17 @@
     git diff <branch_name>  
 ```
 
-- Delete an available git branch
+- Delete an available local git branch
 
 ```console 
     git branch -d <branch_name>
+```
+
+- Delete an available remote git branch
+
+```console 
+    git branch --delete --remotes <origin/branch_name>
+    git branch --delete --remotes <upstream/branch_name>
 ```
 
 - Delete an available remote GitHub branch
@@ -304,6 +311,8 @@
 
 ```console 
     git fetch origin
+    git fetch upstream 
+    git fetch upstream --prune
 ```
 
 - Pull the latest changes from a remote branch
@@ -402,6 +411,30 @@
 ```console  
     git push origin <branch_name>   
     git push origin <branch_name> -f    (Force Push)
+```
+
+- Delete a particular file from the git index permanently
+
+```console
+    git rm <file_name>
+```
+
+- Delete/Untrack a particular file from the git index but keep it in the present working directory 
+
+```console
+    git rm --cached <file_name>
+```
+
+- Rename a particular file 
+
+```console
+    git mv <old_file_name> <new_file_name>
+```
+
+- Move a particular file
+
+```console
+    git mv <old_file_name> <new_file_name_location>
 ```
 
 ### Git Undoing and Going Back In Time
