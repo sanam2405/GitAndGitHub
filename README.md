@@ -243,7 +243,7 @@
 ```
 
 
-### Git Cloning, Branching, Tracking, Merging, Pushing and Pulling
+### Git Cloning, Branching, Tracking, Merging, Pushing, Pulling and Deleting
 
 - Cloning a remote GitHub Repository
 
@@ -411,6 +411,30 @@
 ```console  
     git push origin <branch_name>   
     git push origin <branch_name> -f    (Force Push)
+```
+
+- Delete a particular file from the git index permanently
+
+```console
+    git rm <file_name>
+```
+
+- Delete/Untrack a particular file from the git index but keep it in the present working directory 
+
+```console
+    git rm --cached <file_name>
+```
+
+- Rename a particular file 
+
+```console
+    git mv <old_file_name> <new_file_name>
+```
+
+- Move a particular file
+
+```console
+    git mv <old_file_name> <new_file_name_location>
 ```
 
 ### Git Undoing and Going Back In Time
