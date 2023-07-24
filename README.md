@@ -354,6 +354,7 @@
 
 ```console  
     git add <file_name>  (For tracking a single file)
+    git stage <file_name> (For tracking a single file, synonymous to add)
     git add .            (For tracking all the files)
 ```
 
