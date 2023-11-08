@@ -487,7 +487,7 @@ To push empty folders to GitHub, we directly cannot commit empty folders in git.
 By convention, we add an empty file called .gitkeep to the folder that we want to keep, then in the
 .gitignore file, we add:
 
-```sh
+```console
 # ignore everything inside the folder
 emptyFolderWeWishToShowUp/*
 
