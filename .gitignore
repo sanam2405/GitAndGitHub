@@ -3,3 +3,7 @@ crush/crush_name/*
 !crush/crush_name/.gitkeep
 crush/crush_college/*
 !crush/crush_college/.gitkeep
+wire/wife_name/*
+!wife/wife_name/.gitkeep
+wire/wife_college/*
+!wife/wife_college/.gitkeep
