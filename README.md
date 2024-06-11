@@ -212,6 +212,12 @@
     git log --graph --oneline --decorate
 ```
 
+- See git object history including blobs, trees, commits in a textual format
+
+```console
+   git show 
+```
+
 - Add Remote ORIGIN
 
 ```console
@@ -404,6 +410,7 @@
 
 ```console
     git commit -m <commit_message_title> -m <commit_message_description>
+    git commit
 ```
 
 - Push the current state of the branch into the remote GitHub repository
