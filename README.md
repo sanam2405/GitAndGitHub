@@ -215,7 +215,7 @@
 - See git object history including blobs, trees, commits in a textual format
 
 ```console
-   git show 
+   git show
 ```
 
 - Add Remote ORIGIN
@@ -487,6 +487,13 @@
 
 ## Use Cases
 
+### Q. _.gitignore_ not working post changes to committed files
+
+```console
+git rm -rf --cached .
+git add .
+```
+
 ### Q. How to gitignore contents of a folder but track the folder itself and push it to GitHub?
 
 To push empty folders to GitHub, we directly cannot commit empty folders in git. However, if we want an empty folder to show up, we need to put something in it, even just an empty file.
@@ -500,4 +507,18 @@ emptyFolderWeWishToShowUp/*
 
 # exception to the rule, to keep the folder
 !emptyFolderWeWishToShowUp/.gitkeep
+```
+
+### Q. Get the details of a Pull Request from the _GitHub API_
+
+```console
+curl -H "Accept: application/vnd.github.v3+json" \
+     https://api.github.com/repos/OWNER/REPO/pulls/PULL_NUMBER > pr_details.json
+```
+
+Example
+
+```console
+curl -H "Accept: application/vnd.github.v3+json" \
+    https://api.github.com/repos/sanam2405/PrivacyNetwork/pulls/20 > pr_details.json
 ```
