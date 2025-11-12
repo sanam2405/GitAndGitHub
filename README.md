@@ -522,3 +522,9 @@ Example
 curl -H "Accept: application/vnd.github.v3+json" \
     https://api.github.com/repos/sanam2405/PrivacyNetwork/pulls/20 > pr_details.json
 ```
+
+### Q. Get contributions to a repository made via PRs
+
+```console
+gh pr list --author @me --state merged --limit 1000 --search "merged:>=2024-01-01" --json title,body,url,mergedAt
+```
